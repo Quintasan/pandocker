@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
 	texlive-bibtex-extra \
 	biber \
 	rubber \
+	latex-beamer \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV PATH $HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.8.4/bin:/opt/happy/1.19.5/bin:/opt/alex/3.1.4/bin:$PATH
