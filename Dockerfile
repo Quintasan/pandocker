@@ -22,7 +22,9 @@ RUN echo "deb http://download.fpcomplete.com/debian jessie main" >> /etc/apt/sou
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN  stack update && stack install --resolver lts-${LTSHASKELL} pandoc
+RUN  stack update && \
+     stack setup --resolver lts-${LTSHASKELL} && \
+     stack install --resolver lts-${LTSHASKELL} pandoc
 
 WORKDIR /source
 
