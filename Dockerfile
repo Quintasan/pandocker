@@ -1,14 +1,12 @@
 FROM debian:jessie
 MAINTAINER Michał Zając <pandocker@quintasan.pl>
 
-ENV DEBIAN_FRONTEND noninteractive
-
-ENV LTSHASKELL 7.2
+ENV LTSHASKELL 7.11
 
 RUN echo "deb http://download.fpcomplete.com/debian jessie main" >> /etc/apt/sources.list && \
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 575159689BEFB442 && \
 	apt-get update && \
-	apt-get install -y \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y \
 		stack \
 		texlive \
 		texlive-latex-extra \
