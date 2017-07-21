@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Michał Zając <pandocker@quintasan.pl>
 
-ENV LTSHASKELL 7.11
+ENV LTSHASKELL 8.22
 
 RUN echo "deb http://download.fpcomplete.com/debian jessie main" >> /etc/apt/sources.list && \
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 575159689BEFB442 && \
